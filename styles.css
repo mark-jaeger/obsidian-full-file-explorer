@@ -1,0 +1,123 @@
+.full-explorer {
+	padding: 0;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.full-explorer-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 8px 12px;
+	border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.full-explorer-title {
+	font-weight: 600;
+	font-size: 14px;
+}
+
+.full-explorer-refresh {
+	background: transparent;
+	border: none;
+	cursor: pointer;
+	padding: 4px;
+	border-radius: 4px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.full-explorer-refresh:hover {
+	background: var(--background-modifier-hover);
+}
+
+.full-explorer-tree {
+	flex: 1;
+	overflow-y: auto;
+	padding: 4px 0;
+}
+
+.full-explorer-empty {
+	color: var(--text-muted);
+	padding: 16px;
+	text-align: center;
+	font-size: 13px;
+}
+
+.full-explorer-item {
+	display: flex;
+	flex-direction: column;
+}
+
+.full-explorer-item-row {
+	display: flex;
+	align-items: center;
+	padding: 4px 8px;
+	cursor: pointer;
+	border-radius: 4px;
+	margin: 0 4px;
+	gap: 4px;
+}
+
+.full-explorer-item-row:hover {
+	background: var(--background-modifier-hover);
+}
+
+/* Hidden files styling - slightly dimmed */
+.full-explorer-item-row.is-hidden .full-explorer-name {
+	opacity: 0.7;
+}
+
+.full-explorer-chevron {
+	width: 16px;
+	height: 16px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+}
+
+.full-explorer-chevron svg {
+	width: 12px;
+	height: 12px;
+	color: var(--text-muted);
+}
+
+.full-explorer-chevron-spacer {
+	width: 16px;
+	flex-shrink: 0;
+}
+
+.full-explorer-icon {
+	width: 16px;
+	height: 16px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+}
+
+.full-explorer-icon svg {
+	width: 14px;
+	height: 14px;
+	color: var(--text-muted);
+}
+
+.full-explorer-name {
+	font-size: 13px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+/* Folder-specific styling */
+.full-explorer-item-row:has(.full-explorer-chevron:not(.full-explorer-chevron-spacer)) .full-explorer-name {
+	font-weight: 500;
+}
+
+/* Context menu enhancements */
+.full-explorer-item-row.is-active {
+	background: var(--background-modifier-active-hover);
+}

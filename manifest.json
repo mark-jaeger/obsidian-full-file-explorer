@@ -3,7 +3,7 @@
 	"name": "Full File Explorer",
 	"version": "1.0.0",
 	"minAppVersion": "1.0.0",
-	"description": "A file explorer that shows ALL files including hidden dot-files and folders",
+	"description": "A file explorer that shows ALL files including hidden dot-files and folders.",
 	"author": "Mark Jäger",
 	"authorUrl": "https://github.com/mark-jaeger",
 	"fundingUrl": "https://github.com/sponsors/mark-jaeger",
